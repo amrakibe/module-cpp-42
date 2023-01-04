@@ -6,7 +6,7 @@
 /*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 21:38:24 by amrakibe          #+#    #+#             */
-/*   Updated: 2023/01/04 02:16:46 by amrakibe         ###   ########.fr       */
+/*   Updated: 2023/01/04 02:31:28 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,7 @@ class Form;
 
 class Intern
 {
+	AForm *Form[3];
 	public:
 		Intern();
 		~Intern();
