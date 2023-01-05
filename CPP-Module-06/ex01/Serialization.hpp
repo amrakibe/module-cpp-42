@@ -1,30 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Serialization.hpp                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/03 21:37:41 by amrakibe          #+#    #+#             */
-/*   Updated: 2023/01/04 23:47:43 by amrakibe         ###   ########.fr       */
+/*   Created: 2023/01/05 03:09:09 by amrakibe          #+#    #+#             */
+/*   Updated: 2023/01/05 13:58:52 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Bureaucrat.hpp"
+#pragma once
+#include <iostream>
 
-int main()
+struct Data
 {
-	try
-	{
-		Bureaucrat B("amine", 1);
-		B.decrement();
-		std::cout << B << std::endl;
-		B.increment();
-		B.increment();
-		std::cout << B << std::endl;
-	}
-	catch(const std::exception& e)
-	{
-		std::cerr << e.what() << '\n';
-	}	
-}
+	int age;
+	int size;
+};
+
+uintptr_t	serialize(Data *ptr);
+Data	*deserialize(uintptr_t raw);

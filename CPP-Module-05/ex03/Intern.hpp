@@ -6,7 +6,7 @@
 /*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 21:38:24 by amrakibe          #+#    #+#             */
-/*   Updated: 2023/01/04 02:31:28 by amrakibe         ###   ########.fr       */
+/*   Updated: 2023/01/04 13:48:51 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 #include "RobotomyRequestForm.hpp"
 #include "AForm.hpp"
 
-class Form;
+class AForm;
 
 class Intern
 {
@@ -29,8 +29,4 @@ class Intern
 		Intern(const Intern &obj);
 		Intern & operator=(const Intern &obj);
 		AForm	*makeForm(std::string AFormName, std::string target);
-		class Execute: public  std::exception
-		{
-			const  char *what() const throw();
-		};
 };

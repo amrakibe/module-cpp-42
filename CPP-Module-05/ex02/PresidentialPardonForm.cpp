@@ -6,7 +6,7 @@
 /*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 21:36:32 by amrakibe          #+#    #+#             */
-/*   Updated: 2023/01/03 22:47:55 by amrakibe         ###   ########.fr       */
+/*   Updated: 2023/01/04 13:15:51 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,7 +54,7 @@ std::string PresidentialPardonForm::getTarget()const
 
 void	PresidentialPardonForm::execute(Bureaucrat const & executor) const
 {
-	if(!PresidentialPardonForm::getSign() && executor.getGrade() > PresidentialPardonForm::getGradesignt())
+	if(!PresidentialPardonForm::getSign() || executor.getGrade() > PresidentialPardonForm::getGradesignt())
 		throw GradeTooHighException();
 	std::cout << this->getTarget() << " has been pardoned by Zaphod Beeblebrox." << std::endl;
 }

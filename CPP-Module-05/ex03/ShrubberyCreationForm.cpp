@@ -6,7 +6,7 @@
 /*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 21:36:52 by amrakibe          #+#    #+#             */
-/*   Updated: 2023/01/04 01:08:08 by amrakibe         ###   ########.fr       */
+/*   Updated: 2023/01/04 13:34:09 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -84,7 +84,7 @@ static std::string	TreeAsci()
 
 void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 {
-	if (!ShrubberyCreationForm::getSign() && executor.getGrade() > ShrubberyCreationForm::getGradesignt())
+	if (!ShrubberyCreationForm::getSign() || (executor.getGrade() > ShrubberyCreationForm::getGradesignt()))
 		throw GradeTooLowException();
 	std::ofstream ofile;
 	ofile.open(this->getTarget() + "_shrubbery");

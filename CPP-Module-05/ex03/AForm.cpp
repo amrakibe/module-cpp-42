@@ -6,12 +6,11 @@
 /*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 15:32:47 by amrakibe          #+#    #+#             */
-/*   Updated: 2023/01/04 01:14:52 by amrakibe         ###   ########.fr       */
+/*   Updated: 2023/01/04 14:22:53 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "AForm.hpp"
-#include "Bureaucrat.hpp"
 
 AForm::~AForm(){
 }

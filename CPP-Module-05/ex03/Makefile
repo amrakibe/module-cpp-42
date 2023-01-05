@@ -6,11 +6,11 @@
 #    By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/01/03 21:36:25 by amrakibe          #+#    #+#              #
-#    Updated: 2023/01/04 02:11:35 by amrakibe         ###   ########.fr        #
+#    Updated: 2023/01/04 12:55:37 by amrakibe         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = 28B
+NAME =  Intern
 
 CC = c++
 FLAG = -Wall -Wextra -Werror -std=c++98

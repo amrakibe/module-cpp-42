@@ -6,7 +6,7 @@
 /*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 20:27:15 by amrakibe          #+#    #+#             */
-/*   Updated: 2023/01/03 23:54:00 by amrakibe         ###   ########.fr       */
+/*   Updated: 2023/01/04 14:21:49 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,6 @@ Bureaucrat::Bureaucrat() : name("Bureaucrat")
 
 Bureaucrat::~Bureaucrat()
 {
-	std::cout << "Destructor called" << std::endl;
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &obj)
@@ -97,9 +96,8 @@ void Bureaucrat::executeForm(AForm const &form)
 {
 	try
 	{
-		// form.beSigned(*this);
-		// std::cout << this->getName() << " signed " << form.getName() << std::endl;
-		try{
+		try
+		{
 			form.execute(*this);
 			std::cout << *this << " Executed " << form.getName() << std::endl;
 		}

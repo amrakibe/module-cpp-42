@@ -6,7 +6,7 @@
 /*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 14:03:35 by amrakibe          #+#    #+#             */
-/*   Updated: 2023/01/04 00:07:32 by amrakibe         ###   ########.fr       */
+/*   Updated: 2023/01/04 14:20:59 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,20 +54,16 @@ Bureaucrat::Bureaucrat() : name("Bureaucrat")
 	this->grade = 150;
 }
 
-Bureaucrat::~Bureaucrat()
-{
-	std::cout << "Destructor called" << std::endl;
+Bureaucrat::~Bureaucrat(){
 }
 
 Bureaucrat::Bureaucrat(const Bureaucrat &obj)
 {
-	std::cout << "Copy constructor Called" << std::endl;
 	*this = obj;
 }
 
 Bureaucrat & Bureaucrat::operator=(const Bureaucrat &obj)
 {
-	std::cout << "Copy Assignment Operator Called" << std::endl;
 	if (this != &obj)
 	{
 		this->grade = obj.grade;
@@ -85,7 +81,7 @@ void Bureaucrat::signForm(Form &form)
 	catch(const std::exception& msg)
 	{
 		std::cerr << msg.what() << '\n';
-		std::cout << this->getName() << " couldn't sign "<< form.getName() << " because " << msg.what() << std::endl;
+		std::cout << this->getName() << "  "<< form.getName() << " because " << msg.what() << std::endl;
 	}
 }
 

@@ -6,7 +6,7 @@
 /*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 21:36:40 by amrakibe          #+#    #+#             */
-/*   Updated: 2023/01/04 02:05:54 by amrakibe         ###   ########.fr       */
+/*   Updated: 2023/01/05 00:23:14 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,8 +55,9 @@ const char *RobotomyRequestForm::TargetCanNotBeEmptyException::what() const thro
 }
 
 void RobotomyRequestForm::execute(const Bureaucrat &executor) const{
-	 if(executor.getGrade() > RobotomyRequestForm::getGradesignt())
-        throw GradeTooLowException();
+	
+if (!RobotomyRequestForm::getSign() || (executor.getGrade() > RobotomyRequestForm::getGradesignt()))
+		throw GradeTooLowException();
 	srand(time(0));
 	int x = (rand() % 2);
 	if(x == 1)

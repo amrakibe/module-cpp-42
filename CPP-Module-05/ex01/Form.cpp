@@ -6,7 +6,7 @@
 /*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/01/03 21:37:57 by amrakibe          #+#    #+#             */
-/*   Updated: 2023/01/04 00:11:40 by amrakibe         ###   ########.fr       */
+/*   Updated: 2023/01/05 00:14:48 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,7 +67,7 @@ Form &Form::operator=(const Form &obj)
     {
         this->sign = obj.sign;
     }
-    return(*this);
+    return (*this);
 }
 
 const char *Form::GradeTooLowException::what() const throw()
