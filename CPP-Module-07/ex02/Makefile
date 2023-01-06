@@ -1,9 +1,9 @@
-NAME = Base
+NAME = array
 
 CC = c++
 FLAG = -Wall -Wextra -Werror -std=c++98
 RM = rm -fr
-src = Base.cpp main.cpp
+src = main.cpp
 
 OBJ = $(src:.cpp=.o)
 
@@ -12,13 +12,14 @@ $(NAME) : $(OBJ)
 
 all : $(NAME)
 
-%.o:%.cpp Base.hpp
+%.o:%.cpp Array.hpp
 	$(CC) $(FLAG) -c $< -o $@
+
+clean:
+	$(RM) $(OBJ)
 
 fclean: clean
 	$(RM) $(NAME)
-clean:
-	$(RM) $(OBJ)
 
 re: fclean all
 

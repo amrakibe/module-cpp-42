@@ -5,33 +5,31 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2023/01/05 03:09:14 by amrakibe          #+#    #+#             */
-/*   Updated: 2023/01/06 13:06:40 by amrakibe         ###   ########.fr       */
+/*   Created: 2023/01/06 18:47:59 by amrakibe          #+#    #+#             */
+/*   Updated: 2023/01/06 21:42:24 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Serialization.hpp"
+#include "iter.hpp"
+
+template <typename T>
+void Print(const T &element)
+{
+	std::cout << element << std::endl;
+}
 
 int main()
 {
-	Data t;
-	Data n;
-	Data *P;
-	
-	n.age = 250;
-	n.size =75;
-	t.age = 250;
-	t.size = 75;
+	int array[4] = {0,1,2,3};
+	std::cout << "array to int: " << std::endl;
+	::iter(array, 4, Print);
 
-	uintptr_t ptr = serialize(&t);
-	std::cout << "decimal address  :  " << ptr << std::endl;
-	std::cout << "data address     :  " << &t << std::endl;
-	std::cout << "data address     :  " << &n << std::endl;
-	P = deserialize(ptr);
-	std::cout << "desr              :  " << P << std::endl;
-	std::cout << "value age is      : " << P->age << std::endl;
-	std::cout << "value size is     : " << P->size << std::endl;
+	std::string arr[4] = {"rakibe", "leet", "amine", "sbrk"};
+	std::cout << "array of string: " << std::endl;
+	::iter(arr, 4, Print);
 
-	&t  ==  P ? std::cout << "true" : std::cout << "false"; 
+	int array[4] = {0,1,2,3};
+	std::cout << "array to int: ";
+	::iter(array, 4, Print);
 	return (0);
 }
