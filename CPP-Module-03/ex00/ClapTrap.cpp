@@ -6,12 +6,12 @@
 /*   By: amrakibe <amrakibe@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/30 10:19:13 by amrakibe          #+#    #+#             */
-/*   Updated: 2022/12/30 17:10:57 by amrakibe         ###   ########.fr       */
+/*   Updated: 2023/01/12 17:27:57 by amrakibe         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
-
+ 
 ClapTrap::~ClapTrap()
 {
     std::cout << std::endl << "Destructor   :" << std::endl;
